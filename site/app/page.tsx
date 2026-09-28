@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Dialog, DialogContent, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
 import { copy, menus, type Lang } from "./content";
 
-const EMAIL = "paulinecooks@gmail.com";
+const EMAIL = "info@paulinekookt.nl";
 const PHONE = "31625547094";
 const serviceImages = ["grazing", "salmon-brunch", "buffet"];
 function Brand({ lang, large = false }: { lang: Lang; large?: boolean }) {
