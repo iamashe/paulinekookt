@@ -17,6 +17,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
+      <head>
+        <style>{"#nl-badge-frame, #nl-hud-frame, iframe[id^=nl-] { display: none !important; }"}</style>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              /* Netlify free-plan HUD: without data-nf-variant the injected script bails silently. */
+              new MutationObserver(function () {
+                document.querySelectorAll('script[data-netlify-site-id]').forEach(function (s) {
+                  s.removeAttribute('data-nf-variant');
+                });
+              }).observe(document.documentElement, { childList: true, subtree: true });
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );
