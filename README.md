@@ -1,4 +1,4 @@
-# pauline-kookt-site
+# paulinekookt
 
 One static site serving both:
 
