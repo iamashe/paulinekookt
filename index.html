@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pauline Kookt — Binnenkort</title>
+<meta name="description" content="Pauline Kookt — mediterraan sharing food in Arcen. Binnenkort online.">
+<style>
+  :root { --bg: #faf6ef; --ink: #2f2a24; --muted: #8a7a6a; --accent: #c0673f; --olive: #6b7f3f; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    background: var(--bg); color: var(--ink);
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+  }
+  .card { text-align: center; padding: 3rem 1.5rem; max-width: 34rem; }
+  .kicker {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.75rem;
+    color: var(--olive); margin: 0 0 1rem;
+  }
+  h1 { font-size: clamp(2.4rem, 8vw, 3.4rem); margin: 0 0 1rem; font-weight: 500; }
+  .tagline { font-size: 1.15rem; line-height: 1.5; margin: 0 0 2rem; }
+  .soon {
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem;
+    color: var(--muted); margin: 0 0 0.75rem;
+  }
+  .mail {
+    display: inline-block; margin: 0.5rem 0 2rem; color: var(--accent);
+    font-family: ui-sans-serif, system-ui, sans-serif; text-decoration: none; border-bottom: 1px solid currentColor;
+  }
+  .toggle { display: inline-flex; gap: 0.25rem; font-family: ui-sans-serif, system-ui, sans-serif; }
+  .toggle button {
+    border: 1px solid #d8cfc2; background: transparent; color: var(--muted);
+    padding: 0.35rem 0.9rem; border-radius: 999px; font-size: 0.8rem; cursor: pointer;
+  }
+  .toggle button.active { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+  .divider { width: 3rem; height: 2px; background: var(--accent); margin: 0 auto 2rem; border: 0; }
+</style>
+</head>
+<body>
+<main class="card">
+  <p class="kicker" data-nl="Mediterraan sharing food · Arcen (Limburg)" data-de="Mediterranes Sharing Food · Arcen (Limburg)">Mediterraan sharing food · Arcen (Limburg)</p>
+  <h1 data-nl="Pauline Kookt" data-de="Pauline Kocht">Pauline Kookt</h1>
+  <hr class="divider">
+  <p class="tagline"
+     data-nl="Mezze, boards &amp; grazing — voorbij elkaar eten, zoals het hoort."
+     data-de="Mezze, Boards &amp; Grazing — gemeinsam teilen, wie es sein soll.">Mezze, boards &amp; grazing — voorbij elkaar eten, zoals het hoort.</p>
+  <p class="soon"
+     data-nl="Onze website is binnenkort online."
+     data-de="Unsere Website ist gleich online.">Onze website is binnenkort online.</p>
+  <a class="mail" href="mailto:info@paulinekookt.nl">info@paulinekookt.nl</a>
+  <div class="toggle" aria-label="Language">
+    <button type="button" data-lang="nl" class="active">NL</button>
+    <button type="button" data-lang="de">DE</button>
+  </div>
+</main>
+<script>
+(function () {
+  var email = location.hostname.indexOf(".de") !== -1
+    ? "info@paulinekocht.de"
+    : "info@paulinekookt.nl";
+
+  var defaultLang = location.hostname.indexOf(".de") !== -1 ? "de" : "nl";
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  var lang = (saved === "nl" || saved === "de") ? saved : defaultLang;
+
+  var titles = { nl: "Pauline Kookt — Binnenkort", de: "Pauline Kocht — Gleich online" };
+  var mailEl = document.querySelector(".mail");
+
+  function setLang(l) {
+    lang = l;
+    try { localStorage.setItem("lang", l); } catch (e) {}
+    document.documentElement.lang = l;
+    document.title = titles[l];
+    document.querySelectorAll("[data-nl]").forEach(function (el) {
+      el.textContent = el.getAttribute("data-" + l);
+    });
+    document.querySelectorAll(".toggle button").forEach(function (b) {
+      b.classList.toggle("active", b.getAttribute("data-lang") === l);
+    });
+  }
+
+  mailEl.href = "mailto:" + email;
+  mailEl.textContent = email;
+  document.querySelectorAll(".toggle button").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  });
+  setLang(lang);
+})();
+</script>
+</body>
+</html>

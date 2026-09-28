@@ -1,6 +1,12 @@
-# paulinekookt
+# pauline-kookt-site
 
-Websites for **paulinekookt.nl** and **paulinekocht.de**.
+One static site serving both:
 
-- `nl/` → paulinekookt.nl
-- `de/` → paulinekocht.de
+- **paulinekookt.nl** → Dutch
+- **paulinekocht.de** → German
+
+Language is detected from the hostname (`index.html`), with an NL/DE toggle
+persisted per visitor in `localStorage`. Contact email always matches the
+domain being visited.
+
+Deploy: push to `main` → Netlify.
