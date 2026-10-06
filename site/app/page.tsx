@@ -10,7 +10,7 @@ import { copy, menus, type Lang } from "./content";
 const EMAIL_NL = "info@paulinekookt.nl";
 const EMAIL_DE = "info@paulinekocht.de";
 const PHONE = "31625547094";
-const serviceImages = ["grazing", "salmon-brunch", "buffet"];
+const serviceImages = ["sharing-table", "salmon-brunch", "roasted-vegetable-platter"];
 function Brand({ lang, large = false }: { lang: Lang; large?: boolean }) {
   const verb = lang === "nl" ? "kookt" : "cooks";
   return <a href="#top" className={`brand ${large ? "brand-large" : ""}`} aria-label={`Pauline ${verb} — ${lang === "nl" ? "naar boven" : "home"}`}><span>Pauline <em>{verb}</em></span><small>CATERING</small></a>;

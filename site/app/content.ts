@@ -49,7 +49,7 @@ export const copy = {
           "id": "box",
           "tag": "BORRELEN & DELEN",
           "title": "Grazing box",
-          "alt": "Kazen, brood, noten en groente op een rijkgevulde borrelplank",
+          "alt": "Borreltafel met brood, dips, kaas, ham en vijgen",
           "description": "Een goedgevulde borrelbox met kaas, charcuterie, dips, brood en verse extra’s. Klaar om op tafel te zetten.",
           "price": "€75 voor 6 personen"
         },
@@ -65,7 +65,7 @@ export const copy = {
           "id": "buffet",
           "tag": "KOUD, WARM OF ALLEBEI",
           "title": "Een buffet op maat",
-          "alt": "Een buffet met belegde broodjes en verschillende hapjes",
+          "alt": "Geroosterde pompoen, gele courgette en ui met basilicum",
           "description": "Kleurrijke schalen om te delen, warme gerechten of een combinatie. We stellen één passend menu samen voor jouw gezelschap.",
           "price": "Prijs op aanvraag"
         }
@@ -203,34 +203,34 @@ export const copy = {
       "label": "Foto’s van het eten",
       "photos": [
         {
+          "src": "/images/sharing-table.webp",
+          "alt": "Borreltafel met brood, dips, kaas, ham en vijgen",
+          "width": 1125,
+          "height": 1500
+        },
+        {
+          "src": "/images/rustic-bread.webp",
+          "alt": "Brood op een houten plank met citroen en kruiden",
+          "width": 1125,
+          "height": 1500
+        },
+        {
+          "src": "/images/roast-vegetables.webp",
+          "alt": "Gebraden vlees met tomaten, paprika, courgette en rozemarijn",
+          "width": 1125,
+          "height": 1500
+        },
+        {
           "src": "/images/fig-salad.webp",
           "alt": "Salade met vijgen, tomaten en ham",
           "width": 975,
           "height": 1300
         },
         {
-          "src": "/images/burrata-peach.webp",
-          "alt": "Burrata met gegrild fruit en pistachenoten",
-          "width": 1200,
-          "height": 800
-        },
-        {
-          "src": "/images/grazing.webp",
-          "alt": "Borrelplank met kaas, brood en verse extra’s",
-          "width": 800,
-          "height": 1000
-        },
-        {
-          "src": "/images/salmon-brunch.webp",
-          "alt": "Brood met zalm, roomkaas en komkommer",
-          "width": 800,
-          "height": 1000
-        },
-        {
-          "src": "/images/buffet.webp",
-          "alt": "Buffet met belegde broodjes en hartige hapjes",
-          "width": 800,
-          "height": 1000
+          "src": "/images/roasted-vegetable-platter.webp",
+          "alt": "Geroosterde pompoen, gele courgette en ui met basilicum",
+          "width": 1125,
+          "height": 1500
         }
       ]
     },
@@ -287,7 +287,7 @@ export const copy = {
           "id": "box",
           "tag": "GRAZE & SHARE",
           "title": "Grazing box",
-          "alt": "Cheese, bread, nuts and vegetables on a generous grazing board",
+          "alt": "Sharing table with bread, dips, cheese, ham and figs",
           "description": "A generous box of cheeses, charcuterie, dips, bread and fresh extras. Delivered ready to put on the table.",
           "price": "€75 for 6 people"
         },
@@ -303,7 +303,7 @@ export const copy = {
           "id": "buffet",
           "tag": "COLD, WARM OR BOTH",
           "title": "A buffet your way",
-          "alt": "A buffet display of sandwiches and different savoury bites",
+          "alt": "Roasted squash, yellow courgette and onion with basil",
           "description": "Colourful sharing dishes, warm favourites or a little of both. We’ll create one menu that works for your whole gathering.",
           "price": "Price on request"
         }
@@ -441,34 +441,34 @@ export const copy = {
       "label": "Food gallery",
       "photos": [
         {
+          "src": "/images/sharing-table.webp",
+          "alt": "Sharing table with bread, dips, cheese, ham and figs",
+          "width": 1125,
+          "height": 1500
+        },
+        {
+          "src": "/images/rustic-bread.webp",
+          "alt": "Bread on a wooden board with lemon and herbs",
+          "width": 1125,
+          "height": 1500
+        },
+        {
+          "src": "/images/roast-vegetables.webp",
+          "alt": "Roast meat with tomatoes, peppers, courgette and rosemary",
+          "width": 1125,
+          "height": 1500
+        },
+        {
           "src": "/images/fig-salad.webp",
           "alt": "Salad with figs, tomatoes and ham",
           "width": 975,
           "height": 1300
         },
         {
-          "src": "/images/burrata-peach.webp",
-          "alt": "Burrata with grilled fruit and pistachios",
-          "width": 1200,
-          "height": 800
-        },
-        {
-          "src": "/images/grazing.webp",
-          "alt": "Grazing board with cheese, bread and fresh extras",
-          "width": 800,
-          "height": 1000
-        },
-        {
-          "src": "/images/salmon-brunch.webp",
-          "alt": "Bread with salmon, cream cheese and cucumber",
-          "width": 800,
-          "height": 1000
-        },
-        {
-          "src": "/images/buffet.webp",
-          "alt": "Buffet with filled sandwiches and savoury bites",
-          "width": 800,
-          "height": 1000
+          "src": "/images/roasted-vegetable-platter.webp",
+          "alt": "Roasted squash, yellow courgette and onion with basil",
+          "width": 1125,
+          "height": 1500
         }
       ]
     },

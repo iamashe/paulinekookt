@@ -122,3 +122,9 @@
 .gallery-grid img{display:block;width:100%;height:290px;object-fit:cover;aspect-ratio:auto}
 .footer-bottom>button{margin-left:auto}
 @media(max-width:780px){.menu-tabs-list{grid-template-columns:1fr;gap:10px}.menu-tab{min-height:72px}.menu-group li{font-size:1rem}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.gallery-grid img{height:230px}.gallery-grid figure:last-child{grid-column:1/-1}.gallery-grid figure:last-child img{height:240px}.offer-footer p{font-size:1.12rem}}
+
+/* User food photographs: keep the food centred in responsive crops. */
+.offer-card:first-child .offer-image img{object-position:50% 62%}
+.offer-card:nth-child(3) .offer-image img{object-position:50% 58%}
+.gallery-grid figure:nth-child(2) img{object-position:50% 65%}
+.gallery-grid figure:nth-child(3) img{object-position:50% 60%}
