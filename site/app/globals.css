@@ -128,3 +128,11 @@
 .offer-card:nth-child(3) .offer-image img{object-position:50% 58%}
 .gallery-grid figure:nth-child(2) img{object-position:50% 65%}
 .gallery-grid figure:nth-child(3) img{object-position:50% 60%}
+
+/* Personal weekly meals */
+.weekly-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:8%;align-items:center;background:#eee9dc}
+.weekly-image{overflow:hidden}.weekly-image img{display:block;width:100%;height:560px;object-fit:cover;object-position:50% 62%}
+.weekly-copy h2{font-size:clamp(3rem,4.7vw,5rem);margin:22px 0 26px;line-height:1.04}
+.weekly-copy>p:not(.eyebrow){max-width:540px;line-height:1.8;color:#594a3e;margin-bottom:18px}
+.weekly-copy .weekly-price{font-size:.85rem;font-weight:600;letter-spacing:.04em;color:var(--red-dark);margin:28px 0 22px}
+@media(max-width:780px){.weekly-section{grid-template-columns:1fr;gap:32px}.weekly-copy{grid-row:1}.weekly-image img{height:380px}.weekly-copy h2{font-size:3.35rem}.weekly-copy .button{white-space:normal}}

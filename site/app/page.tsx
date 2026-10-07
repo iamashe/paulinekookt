@@ -65,12 +65,12 @@ export default function Home() {
       Promise.resolve(context.registerTool({
         name:"start_catering_enquiry", title:"Start a catering enquiry",
         description:"Select a catering service and open the visible enquiry form. Does not send a message, contact Pauline or book catering.",
-        inputSchema:{type:"object",properties:{service:{type:"string",enum:["unsure","box","lunch","buffet","other"]}},required:["service"],additionalProperties:false},
+        inputSchema:{type:"object",properties:{service:{type:"string",enum:["unsure","box","lunch","buffet","weekly","other"]}},required:["service"],additionalProperties:false},
         annotations:{readOnlyHint:false,untrustedContentHint:false},
         execute: async (input:unknown) => {
           if (!input || typeof input !== "object" || Array.isArray(input)) throw new Error("A service is required.");
           const value = (input as {service?:unknown}).service;
-          if (typeof value !== "string" || !["unsure","box","lunch","buffet","other"].includes(value) || Object.keys(input).some(k=>k!=="service")) throw new Error("Unknown service.");
+          if (typeof value !== "string" || !["unsure","box","lunch","buffet","weekly","other"].includes(value) || Object.keys(input).some(k=>k!=="service")) throw new Error("Unknown service.");
           setService(value);
           await new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve())));
           document.getElementById("contact")?.scrollIntoView({behavior:"instant"});
@@ -85,7 +85,7 @@ export default function Home() {
     const get = (key: string) => String(values.get(key) || "").trim();
     const date = get("date");
     const readableDate = date ? new Date(`${date}T12:00:00`).toLocaleDateString(lang === "nl" ? "nl-NL" : "en-GB", {dateStyle:"long"}) : t.form.unknown;
-    return `${t.form.greeting}\n\n${t.form.intro}\n\n${t.form.name}: ${get("name")}\n${t.form.email}: ${get("email")}\n${t.form.country}: ${country === "de" ? t.form.germany : t.form.netherlands}\n${t.form.service}: ${t.serviceOptions.find(s=>s[0] === service)?.[1]}\n${t.form.date}: ${readableDate}\n${t.form.guests}: ${get("guests") || t.form.unknown}\n${t.form.occasion}: ${get("occasion") || t.form.unknown}\n${t.form.city}: ${get("city") || t.form.unknown}\n\n${t.form.wishes}:\n${get("message") || t.form.noWishes}\n\n${t.form.signoff}\n${get("name")}`;
+    return `${t.form.greeting}\n\n${t.form.intro}\n\n${t.form.name}: ${get("name")}\n${t.form.email}: ${get("email")}\n${t.form.country}: ${country === "de" ? t.form.germany : t.form.netherlands}\n${t.form.service}: ${t.serviceOptions.find(s=>s[0] === service)?.[1]}\n${t.form.date}: ${readableDate}\n${service === "weekly" ? t.form.familyCount : t.form.guests}: ${get("guests") || t.form.unknown}\n${t.form.occasion}: ${get("occasion") || t.form.unknown}\n${t.form.city}: ${get("city") || t.form.unknown}\n\n${t.form.wishes}:\n${get("message") || t.form.noWishes}\n\n${t.form.signoff}\n${get("name")}`;
   }
   function openMessage(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -104,7 +104,7 @@ export default function Home() {
     <a className="skip-link" href="#offers">{t.skip}</a>
     <header className="site-header"><Brand lang={lang}/>
       <nav className={`desktop-nav ${mobileNav ? "is-open" : ""}`} aria-label={t.navigation}>
-        {t.nav.services.map(([id,label])=><a href="#menu" className="nav-service" key={id} onClick={e=>{e.preventDefault();setMobileNav(false);goMenu(id);}}>{label}</a>)}
+        <a href="#offers" onClick={()=>setMobileNav(false)}>{t.nav.catering}</a><a href="#weekly-meals" onClick={()=>setMobileNav(false)}>{t.nav.weekly}</a>
         <a href="#story" onClick={()=>setMobileNav(false)}>{t.nav.story}</a>
         <a href="#contact" className="nav-contact" onClick={()=>setMobileNav(false)}>{t.nav.contact}</a>
       </nav>
@@ -127,6 +127,7 @@ export default function Home() {
           {menus[lang].map(menu=><TabsContent value={menu.id} key={menu.id} className="menu-panel"><div className="menu-caption"><h3>{menu.title}</h3><p className="menu-price">{menu.price}</p><p>{menu.description}</p><div className="menu-practical"><span className="eyebrow">{t.menu.expect}</span><p>{menu.expect}</p></div><button className="button button-red" onClick={()=>plan(menu.id)}>{t.menu.cta}<ArrowUpRight size={17}/></button></div><div className="menu-paper"><div className="menu-paper-heading"><span>Pauline <em>{lang === "nl" ? "kookt" : "cooks"}</em></span><span className="eyebrow">{t.menu.inspiration}</span></div><div className="menu-groups">{menu.groups.map(group=><div className="menu-group" key={group.title}><h4>{group.title}</h4><ul>{group.items.map(item=><li key={item}>{item}</li>)}</ul></div>)}</div></div></TabsContent>)}
         </Tabs>
       </section>
+      <section id="weekly-meals" className="section weekly-section" aria-labelledby="weekly-heading"><div className="weekly-image reveal"><img src="/images/roast-vegetables.webp" alt={t.weekly.alt} width="1125" height="1500" loading="lazy"/></div><div className="weekly-copy reveal"><p className="eyebrow red">{t.weekly.eyebrow}</p><h2 id="weekly-heading">{t.weekly.title1}<br/><em>{t.weekly.title2}</em></h2><p>{t.weekly.intro}</p><p>{t.weekly.detail}</p><p className="weekly-price">{t.weekly.price}</p><button className="button button-red" onClick={()=>plan("weekly")}>{t.weekly.cta}<ArrowUpRight size={18}/></button></div></section>
       <section id="story" className="story-section"><div className="story-image"><img src="/images/pauline.webp" alt={t.story.alt} width="825" height="1100" loading="lazy"/><span className="portrait-caption handwriting">{t.story.caption}</span></div><div className="story-copy reveal"><p className="eyebrow">{t.story.eyebrow}</p><h2>{t.story.title1}<br/><em>{t.story.title2}</em></h2><p>{t.story.p1}</p><p>{t.story.p2}</p><p>{t.story.p3}</p></div></section>
       <section className="section process-section"><div className="process-heading reveal"><h2>{t.process.title}</h2></div><div className="process-grid">{t.process.steps.map((step,i)=><div className="process-step reveal" key={step.title}><span className="step-number">0{i+1}</span><h3>{step.title}</h3><p>{step.body}</p></div>)}</div><div className="process-action"><a href="#contact" className="button button-red">{t.process.cta}<ArrowUpRight size={18}/></a></div></section>
       <section id="contact" className="section contact-section">
@@ -135,9 +136,9 @@ export default function Home() {
           <div className="form-grid"><label>{t.form.name} *<input name="name" autoComplete="name" required maxLength={100}/></label><label>{t.form.email} *<input name="email" type="email" autoComplete="email" required maxLength={160}/></label></div>
           <label>{t.form.country}<select name="country" value={country} onChange={e=>{setCountry(e.target.value as "nl" | "de");setContactFeedback("");}}><option value="nl">{t.form.netherlands}</option><option value="de">{t.form.germany}</option></select></label>
           <div className="form-field"><label htmlFor="service-select">{t.form.service}</label><Select value={service} onValueChange={v=>{setService(v);setContactFeedback("");}}><SelectTrigger id="service-select" className="service-select"><SelectValue/></SelectTrigger><SelectContent>{t.serviceOptions.map(([id,label])=><SelectItem value={id} key={id}>{label}</SelectItem>)}</SelectContent></Select></div>
-          <div className="form-grid"><label>{t.form.dateOptional}<input name="date" type="date" min={today || undefined}/></label><label>{t.form.guestsOptional}<input name="guests" type="number" min="1" step="1" placeholder={t.form.guestsPlaceholder}/></label></div>
+          <div className="form-grid"><label>{t.form.dateOptional}<input name="date" type="date" min={today || undefined}/></label><label>{service === "weekly" ? t.form.familyCount : t.form.guestsOptional}<input name="guests" type="number" min="1" step="1" placeholder={t.form.guestsPlaceholder}/></label></div>
           <div className="form-grid"><label>{t.form.occasionOptional}<input name="occasion" placeholder={t.form.occasionPlaceholder} maxLength={120}/></label><label>{t.form.cityOptional}<input name="city" placeholder={t.form.cityPlaceholder} maxLength={140}/></label></div>
-          <label>{t.form.wishesOptional}<textarea name="message" rows={3} maxLength={2500} placeholder={t.form.wishesPlaceholder}/></label>
+          <label>{t.form.wishesOptional}<textarea name="message" rows={3} maxLength={2500} placeholder={service === "weekly" ? t.form.weeklyPlaceholder : t.form.wishesPlaceholder}/></label>
           <div className="form-buttons"><button type="submit" value="email" className="button button-red">{t.form.emailButton}<ArrowUpRight size={17}/></button><button type="submit" value="whatsapp" className="button button-outline">WhatsApp<MessageCircle size={17}/></button></div><p className="form-explanation">{t.form.handoff}</p><div className="form-small-links"><button type="button" onClick={copyMessage}>{t.form.copy}</button><button type="button" onClick={()=>setPrivacy(true)}>{t.form.privacy}</button></div><p className="form-feedback" role="status" aria-live="polite">{contactFeedback}</p>
         </form></div>
       </section>

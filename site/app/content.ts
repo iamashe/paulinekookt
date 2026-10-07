@@ -1,43 +1,31 @@
 export type Lang = "nl" | "en";
 export const copy = {
   "nl": {
-    "pageTitle": "Pauline kookt | Borrelboxen, lunch & buffetten in Arcen",
-    "meta": "Persoonlijke catering vanuit Arcen. Borrelboxen, lunch, brunch en warme of koude buffetten voor jouw feest of bedrijf. Een voorstel op maat, antwoord binnen 48 uur.",
+    "pageTitle": "Pauline kookt | Catering & maaltijden op maat in Arcen",
+    "meta": "Persoonlijke catering en huisgemaakte weekmaaltijden vanuit Arcen. Borrelboxen, lunch, brunch en buffetten. Een voorstel op maat, antwoord binnen 48 uur.",
     "skip": "Naar het aanbod",
     "navigation": "Hoofdnavigatie",
     "closeMenu": "Menu sluiten",
     "openMenu": "Menu openen",
     "close": "Sluiten",
     "nav": {
-      "services": [
-        [
-          "box",
-          "Grazing box"
-        ],
-        [
-          "lunch",
-          "Lunch of brunch"
-        ],
-        [
-          "buffet",
-          "Warm & koud buffet"
-        ]
-      ],
       "story": "Over Pauline",
-      "contact": "Contact"
+      "contact": "Contact",
+      "catering": "Catering",
+      "weekly": "Maaltijden op maat"
     },
     "hero": {
       "eyebrow": "CATERING · ARCEN & OMGEVING",
       "line1": "Lekker eten.",
       "line2": "Fijn samen.",
-      "intro": "Van een goedgevulde borrelbox tot een tafel voor je hele gezelschap. Persoonlijk bereid, met aandacht voor jouw moment.",
+      "intro": "Van een goedgevulde borrelbox tot huisgemaakte maaltijden voor jouw week. Persoonlijk bereid, met aandacht voor jouw wensen.",
       "cta": "Ontdek het aanbod",
       "secondary": "Vertel me je plannen",
       "note": "Met liefde, van Pauline",
       "bottom": "VOOR KLEINE FEESTJES & GROTE MOMENTEN"
     },
     "offers": {
-      "eyebrow": "3 MANIEREN OM SAMEN TE GENIETEN",
+      "eyebrow": "CATERING · 3 MANIEREN OM TE DELEN",
       "title1": "Jouw gezelschap.",
       "title2": "Jouw tafel.",
       "details": "Dit kun je verwachten",
@@ -150,6 +138,10 @@ export const copy = {
         "Koud of warm buffet"
       ],
       [
+        "weekly",
+        "Maaltijden op maat — wekelijks"
+      ],
+      [
         "other",
         "Een ander idee / een combinatie"
       ]
@@ -189,7 +181,9 @@ export const copy = {
       "subject": "Cateringaanvraag — Pauline kookt",
       "draftNotice": "Je bericht staat klaar om te versturen. Rond het versturen af in je e-mailapp of WhatsApp. Er is nog niets automatisch verzonden.",
       "copied": "Je aanvraag is gekopieerd. Mail hem naar",
-      "copyFailed": "Kopiëren lukte niet. Gebruik de e-mail- of WhatsApp-knop, of mail rechtstreeks naar"
+      "copyFailed": "Kopiëren lukte niet. Gebruik de e-mail- of WhatsApp-knop, of mail rechtstreeks naar",
+      "familyCount": "Personen in je gezin (ongeveer)",
+      "weeklyPlaceholder": "Voor hoeveel volwassenen en kinderen? Hoeveel maaltijden per week? Wat eten jullie graag, en zijn er allergieën? Koken bij jullie thuis of liever bezorgd?"
     },
     "privacy": {
       "intro": "Je aanvraag, persoonlijk behandeld.",
@@ -236,46 +230,44 @@ export const copy = {
     },
     "footer": {
       "back": "Naar boven"
+    },
+    "weekly": {
+      "eyebrow": "MAALTIJDEN OP MAAT",
+      "title1": "Goed eten.",
+      "title2": "Ook in een volle week.",
+      "intro": "Huisgemaakte maaltijden voor jouw gezin, afgestemd op jullie smaak en weekritme. Ik zorg voor het menu, de boodschappen en het koken, zodat jullie meer tijd overhouden voor elkaar.",
+      "detail": "Bereid in jouw keuken of bij je thuis bezorgd. We bespreken samen wat bij jullie past.",
+      "price": "Op aanvraag · een persoonlijk voorstel",
+      "cta": "Bespreek jouw week",
+      "alt": "Gebraden vlees met kleurrijke groenten en rozemarijn"
     }
   },
   "en": {
-    "pageTitle": "Pauline cooks | Grazing boxes, lunch & buffets in Arcen",
-    "meta": "Personal catering from Arcen. Grazing boxes, lunch, brunch and warm or cold buffets for private celebrations and company events. A tailored quote and a reply within 48 hours.",
+    "pageTitle": "Pauline cooks | Catering & weekly meals in Arcen",
+    "meta": "Personal catering and homemade weekly meals from Arcen. Grazing boxes, lunches, brunches and buffets. A tailored proposal and a reply within 48 hours.",
     "skip": "Skip to the food",
     "navigation": "Main navigation",
     "closeMenu": "Close menu",
     "openMenu": "Open menu",
     "close": "Close",
     "nav": {
-      "services": [
-        [
-          "box",
-          "Grazing box"
-        ],
-        [
-          "lunch",
-          "Lunch or brunch"
-        ],
-        [
-          "buffet",
-          "Warm & cold buffet"
-        ]
-      ],
       "story": "Meet Pauline",
-      "contact": "Contact"
+      "contact": "Contact",
+      "catering": "Catering",
+      "weekly": "Weekly meals"
     },
     "hero": {
       "eyebrow": "CATERING · ARCEN & SURROUNDINGS",
       "line1": "Good food.",
       "line2": "Great company.",
-      "intro": "From a generous grazing box to a table for everyone. Food prepared with care, for your kind of gathering.",
+      "intro": "From a generous grazing box to homemade meals for your week. Personally prepared, with care for what matters to you.",
       "cta": "Explore the food",
       "secondary": "Tell me your plans",
       "note": "With love, from Pauline",
       "bottom": "FOR LITTLE CELEBRATIONS & BIG MOMENTS"
     },
     "offers": {
-      "eyebrow": "3 WAYS TO BRING PEOPLE TOGETHER",
+      "eyebrow": "CATERING · 3 WAYS TO SHARE",
       "title1": "Your people.",
       "title2": "Your table.",
       "details": "See what’s included",
@@ -388,6 +380,10 @@ export const copy = {
         "Cold or warm buffet"
       ],
       [
+        "weekly",
+        "Personal weekly meals"
+      ],
+      [
         "other",
         "Another idea / a combination"
       ]
@@ -427,7 +423,9 @@ export const copy = {
       "subject": "Catering enquiry — Pauline cooks",
       "draftNotice": "Your message is ready to send. Finish sending it in your email app or WhatsApp. Nothing has been sent automatically.",
       "copied": "Your enquiry has been copied. Email it to",
-      "copyFailed": "Couldn’t copy your message. Use the email or WhatsApp button, or email"
+      "copyFailed": "Couldn’t copy your message. Use the email or WhatsApp button, or email",
+      "familyCount": "People in your household (approximately)",
+      "weeklyPlaceholder": "How many adults and children? How many dinners each week? Favourite foods or allergies? Cooking in your kitchen or delivery?"
     },
     "privacy": {
       "intro": "Your enquiry, personally handled.",
@@ -474,6 +472,16 @@ export const copy = {
     },
     "footer": {
       "back": "Back to top"
+    },
+    "weekly": {
+      "eyebrow": "PERSONAL WEEKLY MEALS",
+      "title1": "Good food.",
+      "title2": "Even on your busiest days.",
+      "intro": "Homemade meals for your family, tailored to your tastes and weekly routine. I take care of the menu, shopping and cooking, giving you more time together.",
+      "detail": "Prepared in your kitchen or delivered to your home. Together, we’ll find what suits your family.",
+      "price": "On request · a personal proposal",
+      "cta": "Let’s plan your week",
+      "alt": "Roast meat with colourful vegetables and rosemary"
     }
   }
 };
