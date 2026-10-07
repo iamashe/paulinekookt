@@ -28,9 +28,9 @@ export const copy = {
       "eyebrow": "CATERING · 3 MANIEREN OM TE DELEN",
       "title1": "Jouw gezelschap.",
       "title2": "Jouw tafel.",
-      "details": "Dit kun je verwachten",
+      "details": "Bekijk menu & details",
       "personal": "Iedere tafel is anders.",
-      "flexible": "Een eigen idee, favoriete gerecht of vegetarische wens? Vertel het me gerust.",
+      "flexible": "Een eigen idee, favoriet gerecht of vegetarische wens? Vertel het me gerust.",
       "ask": "Bespreek je wensen",
       "cards": [
         {
@@ -148,13 +148,13 @@ export const copy = {
     ],
     "form": {
       "heading": "Waar denk je aan?",
-      "description": "Alleen je naam en e-mail zijn nodig. Vul de rest in voor zover je het al weet.",
+      "description": "Een kort bericht is genoeg. De details bespreken we samen.",
       "name": "Naam",
       "email": "E-mail",
       "country": "Land van je bijeenkomst",
       "netherlands": "Nederland",
       "germany": "Duitsland",
-      "service": "Ik ben geïnteresseerd in",
+      "service": "Waar ben je in geïnteresseerd?",
       "date": "Datum",
       "dateOptional": "Datum (als bekend)",
       "guests": "Aantal gasten",
@@ -166,9 +166,9 @@ export const copy = {
       "city": "Plaats / postcode",
       "cityOptional": "Plaats / postcode (optioneel)",
       "cityPlaceholder": "Bijv. Arcen of Straelen",
-      "wishes": "Wensen",
+      "wishes": "Vertel me kort je wensen",
       "wishesOptional": "Vertel me je wensen (optioneel)",
-      "wishesPlaceholder": "Wat vier je? Favoriete gerechten, een budget of dieetwensen?",
+      "wishesPlaceholder": "Bijvoorbeeld de datum, plaats en het aantal personen, als je dat al weet.",
       "emailButton": "Verder via e-mail",
       "handoff": "Je e-mailapp of WhatsApp opent met je aanvraag ingevuld. Controleer het bericht en verstuur het daar zelf.",
       "copy": "Kopieer mijn aanvraag",
@@ -176,14 +176,14 @@ export const copy = {
       "unknown": "Nog niet bekend",
       "noWishes": "Bespreek ik graag samen.",
       "greeting": "Hallo Pauline,",
-      "intro": "Ik wil graag de mogelijkheden bespreken voor mijn bijeenkomst.",
+      "intro": "Ik wil graag de mogelijkheden met je bespreken.",
       "signoff": "Hartelijke groet,",
-      "subject": "Cateringaanvraag — Pauline kookt",
+      "subject": "Mijn aanvraag — Pauline kookt",
       "draftNotice": "Je bericht staat klaar om te versturen. Rond het versturen af in je e-mailapp of WhatsApp. Er is nog niets automatisch verzonden.",
       "copied": "Je aanvraag is gekopieerd. Mail hem naar",
       "copyFailed": "Kopiëren lukte niet. Gebruik de e-mail- of WhatsApp-knop, of mail rechtstreeks naar",
       "familyCount": "Personen in je gezin (ongeveer)",
-      "weeklyPlaceholder": "Voor hoeveel volwassenen en kinderen? Hoeveel maaltijden per week? Wat eten jullie graag, en zijn er allergieën? Koken bij jullie thuis of liever bezorgd?"
+      "weeklyPlaceholder": "Vertel me over je gezin, jullie woonplaats en hoeveel maaltijden je zoekt. Nog niet zeker? Dat is prima."
     },
     "privacy": {
       "intro": "Je aanvraag, persoonlijk behandeld.",
@@ -240,6 +240,36 @@ export const copy = {
       "price": "Op aanvraag · een persoonlijk voorstel",
       "cta": "Bespreek jouw week",
       "alt": "Gebraden vlees met kleurrijke groenten en rozemarijn"
+    },
+    "pages": {
+      "home": "Home",
+      "overview": "Alle catering",
+      "weeklyMore": "Ontdek maaltijden op maat",
+      "storyMore": "Meer over Pauline",
+      "storyShort": "Ik ben Pauline, moeder van twee en de kok achter deze nieuwe onderneming in Arcen. Ik bereid met aandacht, luister naar je wensen en maak van samen eten graag iets bijzonders.",
+      "contactCta": "Neem contact op",
+      "contactShort": "Een idee of al concrete plannen? Vertel het me. Je krijgt binnen 48 uur een persoonlijk antwoord.",
+      "menuHeading": "Een voorproefje van het menu",
+      "menuIntro": "Dit zijn menu-ideeën. We stemmen de invulling samen af op jouw wensen.",
+      "delivery": "Bezorging vanuit Arcen, op afspraak. Bezorgkosten bevestig ik vooraf in je voorstel.",
+      "weeklySteps": [
+        {
+          "title": "Jullie week, jullie smaak",
+          "body": "We bespreken je gezin, favoriete gerechten en hoeveel maaltijden je nodig hebt."
+        },
+        {
+          "title": "Een persoonlijk menu",
+          "body": "Je ontvangt een voorstel met gerechten, een duidelijke prijs en de praktische afspraken."
+        },
+        {
+          "title": "Gekookt voor jullie",
+          "body": "Ik kook bij jullie thuis of bezorg de maaltijden. Bewaren en opwarmen bespreken we vooraf."
+        }
+      ],
+      "weeklyNote": "Op aanvraag en afhankelijk van beschikbaarheid. We bespreken allergieën, dieetwensen en de invulling voordat je beslist.",
+      "weeklyIntroShort": "Huisgemaakte maaltijden die passen bij jouw gezin en week. Bij jullie thuis gekookt of persoonlijk bezorgd.",
+      "menuLink": "Bekijk het menu",
+      "homeSkip": "Naar de inhoud"
     }
   },
   "en": {
@@ -270,7 +300,7 @@ export const copy = {
       "eyebrow": "CATERING · 3 WAYS TO SHARE",
       "title1": "Your people.",
       "title2": "Your table.",
-      "details": "See what’s included",
+      "details": "View menu & details",
       "personal": "Every table is different.",
       "flexible": "Your own idea, a favourite dish or a vegetarian preference? I’d love to hear it.",
       "ask": "Talk through your wishes",
@@ -390,13 +420,13 @@ export const copy = {
     ],
     "form": {
       "heading": "What do you have in mind?",
-      "description": "Only your name and email are needed. Share any other details you already know.",
+      "description": "A short message is enough. We’ll work out the details together.",
       "name": "Name",
       "email": "Email",
       "country": "Country of your event",
       "netherlands": "Netherlands",
       "germany": "Germany",
-      "service": "I’m interested in",
+      "service": "What are you interested in?",
       "date": "Date",
       "dateOptional": "Date (if known)",
       "guests": "Number of guests",
@@ -408,9 +438,9 @@ export const copy = {
       "city": "Town / postcode",
       "cityOptional": "Town / postcode (optional)",
       "cityPlaceholder": "For example, Arcen or Straelen",
-      "wishes": "Wishes",
+      "wishes": "Tell me a little about your wishes",
       "wishesOptional": "Tell me your wishes (optional)",
-      "wishesPlaceholder": "What are you planning? Favourite dishes, a budget or dietary requirements?",
+      "wishesPlaceholder": "For example, the date, town and number of people, if you already know.",
       "emailButton": "Continue by email",
       "handoff": "Your email app or WhatsApp opens with your enquiry filled in. Review the message and send it there yourself.",
       "copy": "Copy my enquiry",
@@ -418,14 +448,14 @@ export const copy = {
       "unknown": "Not yet decided",
       "noWishes": "I’d love to discuss the possibilities.",
       "greeting": "Hello Pauline,",
-      "intro": "I’d like to discuss catering for my gathering.",
+      "intro": "I’d love to discuss the possibilities with you.",
       "signoff": "Kind regards,",
-      "subject": "Catering enquiry — Pauline cooks",
+      "subject": "My enquiry — Pauline cooks",
       "draftNotice": "Your message is ready to send. Finish sending it in your email app or WhatsApp. Nothing has been sent automatically.",
       "copied": "Your enquiry has been copied. Email it to",
       "copyFailed": "Couldn’t copy your message. Use the email or WhatsApp button, or email",
       "familyCount": "People in your household (approximately)",
-      "weeklyPlaceholder": "How many adults and children? How many dinners each week? Favourite foods or allergies? Cooking in your kitchen or delivery?"
+      "weeklyPlaceholder": "Tell me about your family, your town and how many meals you have in mind. Not sure yet? That’s fine."
     },
     "privacy": {
       "intro": "Your enquiry, personally handled.",
@@ -482,6 +512,36 @@ export const copy = {
       "price": "On request · a personal proposal",
       "cta": "Let’s plan your week",
       "alt": "Roast meat with colourful vegetables and rosemary"
+    },
+    "pages": {
+      "home": "Home",
+      "overview": "All catering",
+      "weeklyMore": "Explore weekly meals",
+      "storyMore": "Meet Pauline",
+      "storyShort": "I’m Pauline, a mum of two and the cook behind this new business in Arcen. I prepare with care, listen to your wishes and love making shared meals feel special.",
+      "contactCta": "Get in touch",
+      "contactShort": "An idea or a plan already in mind? Tell me about it. I’ll personally reply within 48 hours.",
+      "menuHeading": "A taste of the menu",
+      "menuIntro": "These are menu ideas. We’ll agree a selection around your wishes.",
+      "delivery": "Delivery from Arcen by arrangement. Delivery costs are confirmed in your proposal.",
+      "weeklySteps": [
+        {
+          "title": "Your week, your tastes",
+          "body": "We talk about your family, favourite dishes and how many meals you need."
+        },
+        {
+          "title": "A personal menu",
+          "body": "You receive a proposal with dishes, a clear price and the practical arrangements."
+        },
+        {
+          "title": "Cooked for your family",
+          "body": "I cook in your home or deliver the meals. We agree storage and reheating instructions in advance."
+        }
+      ],
+      "weeklyNote": "On request and subject to availability. We discuss allergies, dietary wishes and the arrangements before you decide.",
+      "weeklyIntroShort": "Homemade meals that fit your family and your week. Cooked in your kitchen or personally delivered.",
+      "menuLink": "Explore the menu",
+      "homeSkip": "Skip to content"
     }
   }
 };
